@@ -1,3 +1,4 @@
+import Navbar from "./components/Navbar"
 
 
 function App() {
@@ -5,9 +6,7 @@ function App() {
 
   return (
     <>
-    <div>
-      <h1 className="text-4xl text-red-600">devStack</h1>
-    </div>
+    <Navbar/>
      
     </>
   )
