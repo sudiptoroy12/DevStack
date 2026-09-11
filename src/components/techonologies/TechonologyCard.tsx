@@ -1,12 +1,25 @@
+import { useState, type Dispatch, type SetStateAction } from "react";
 import type { ITechnology } from "../../types/techonologiesType";
 
 
 
 interface CardProps {
   technology: ITechnology;
+  selectedTechnologies: ITechnology[];
+  setSelectedTechnologies: Dispatch<SetStateAction<ITechnology[]>>;
 }
 
-const TechonologyCard = ({ technology }: CardProps) => {
+const TechonologyCard = ({ technology, selectedTechnologies, setSelectedTechnologies }: CardProps) => {
+  const [isSelected, setIsSelected] = useState(false);
+
+
+
+  const handleSelect = () => {
+    setIsSelected(!isSelected);
+    if (isSelected) {
+      setSelectedTechnologies([...selectedTechnologies, technology]);
+    }
+  };
   return (
     <div className="w-full max-w-sm rounded-3xl border border-gray-200 bg-white p-6 shadow-sm transition hover:shadow-md">
       
@@ -60,8 +73,15 @@ const TechonologyCard = ({ technology }: CardProps) => {
       </div>
 
       {/* Button */}
-      <button className="mt-6 w-full rounded-xl bg-slate-950 py-4 text-base font-medium text-white transition hover:bg-slate-800">
-        Add to Stack
+      <button 
+        className={`mt-6 w-full rounded-xl py-4 text-base font-medium transition cursor-pointer ${
+          isSelected 
+            ? 'bg-green-500 hover:bg-green-600 text-white' 
+            : 'bg-slate-950 hover:bg-slate-800 text-white'
+        }`}
+        onClick={handleSelect}
+      >
+        {isSelected ? 'Selected' : 'Add to Stack'}
       </button>
     </div>
   );

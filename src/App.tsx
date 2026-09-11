@@ -7,6 +7,7 @@ import { Suspense } from "react"
 import Techonologies from "./components/techonologies/Techonologies"
 
 
+
  const techonologiesFetch = async(): Promise<ITechnology[]> => {{
         const res = await fetch('/data.json')
         const data = await res.json()
@@ -25,6 +26,7 @@ function App() {
     <Hero/> 
     <Suspense fallback={<div>Loading...</div>}>   
     <Techonologies techonologiesPromise={techonologiesPromise}/>
+    
     </Suspense>
     <Footer/>
    
