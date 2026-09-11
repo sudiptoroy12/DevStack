@@ -1,4 +1,4 @@
-import Card from "./components/techonologies/Card"
+import Card from "./components/techonologies/TechonologyCard"
 import Footer from "./components/Footer"
 import Hero from "./components/Hero"
 import Navbar from "./components/Navbar"
@@ -22,11 +22,12 @@ function App() {
   return (
     <>
     <Navbar/>
-    <Hero/>
-    <Footer/>
+    <Hero/> 
     <Suspense fallback={<div>Loading...</div>}>   
     <Techonologies techonologiesPromise={techonologiesPromise}/>
     </Suspense>
+    <Footer/>
+   
      
     </>
   )

@@ -1,19 +1,12 @@
-interface Technology {
-  id: string;
-  name: string;
-  category: string;
-  description: string;
-  icon: string;
-  rating: number;
-  difficulty: string;
-  badge: string;
-}
+import type { ITechnology } from "../../types/techonologiesType";
+
+
 
 interface CardProps {
-  technology: Technology;
+  technology: ITechnology;
 }
 
-const Card = ({ technology }: CardProps) => {
+const TechonologyCard = ({ technology }: CardProps) => {
   return (
     <div className="w-full max-w-sm rounded-3xl border border-gray-200 bg-white p-6 shadow-sm transition hover:shadow-md">
       
@@ -26,7 +19,7 @@ const Card = ({ technology }: CardProps) => {
             className="h-14 w-14 object-contain"
           />
 
-          <span className="h-2 w-2 rounded-full bg-gray-800"></span>
+          
         </div>
 
         <span className="rounded-full bg-blue-50 px-5 py-2 text-sm font-medium text-blue-500">
@@ -74,4 +67,4 @@ const Card = ({ technology }: CardProps) => {
   );
 };
 
-export default Card;
+export default TechonologyCard;
