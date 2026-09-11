@@ -1,10 +1,22 @@
-import Card from "./components/Card"
+import Card from "./components/techonologies/Card"
 import Footer from "./components/Footer"
 import Hero from "./components/Hero"
 import Navbar from "./components/Navbar"
+import type { ITechnology } from "./types/techonologiesType"
+import { Suspense } from "react"
+import Techonologies from "./components/techonologies/Techonologies"
+
+
+ const techonologiesFetch = async(): Promise<ITechnology[]> => {{
+        const res = await fetch('/data.json')
+        const data = await res.json()
+        return data;
+    }}
 
 
 function App() {
+
+  const techonologiesPromise = techonologiesFetch()
  
 
   return (
@@ -12,18 +24,9 @@ function App() {
     <Navbar/>
     <Hero/>
     <Footer/>
-    <Card
-      technology={{
-        id: "1",
-        name: "React",
-        category: "Frontend",
-        description: "A JavaScript library for building user interfaces.",
-        icon: "/path/to/react-icon.png",
-        rating: 4.8,
-        difficulty: "Intermediate",
-        badge: "Popular"
-      }}
-    />
+    <Suspense fallback={<div>Loading...</div>}>   
+    <Techonologies techonologiesPromise={techonologiesPromise}/>
+    </Suspense>
      
     </>
   )
