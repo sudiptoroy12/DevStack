@@ -5,8 +5,8 @@ import { useState } from "react";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <nav className="w-full bg-white shadow-md">
-      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <nav className="w-full bg-white shadow-md sticky top-0 z-50">
+      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between ">
         {/*Hamburger*/}
         <button
           onClick={() => setIsOpen(!isOpen)}
@@ -58,30 +58,24 @@ const Navbar = () => {
           </button>
         </div>
       </div>
-      {/* Mobile Navigation */}{" "}
+      {/* Mobile Navigation */}
       {isOpen && (
         <div className="mt-5 h-[400px]   flex  flex-col justify-center items-center gap-4 border-t pt-5 md:hidden">
-          {" "}
           <a href="#" className="text-gray-700">
-            {" "}
-            Home{" "}
-          </a>{" "}
+            Home
+          </a>
           <a href="#" className="text-gray-700">
-            {" "}
-            Technologies{" "}
-          </a>{" "}
+            Technologies
+          </a>
           <a href="#" className="text-gray-700">
-            {" "}
-            Projects{" "}
-          </a>{" "}
+            Projects
+          </a>
           <a href="#" className="text-gray-700">
-            {" "}
-            About{" "}
-          </a>{" "}
+            About
+          </a>
           <a href="#" className="text-gray-700">
-            {" "}
-            Contact{" "}
-          </a>{" "}
+            Contact
+          </a>
         </div>
       )}
     </nav>
