@@ -1,4 +1,4 @@
-import  { use, useState, type Dispatch, type SetStateAction } from 'react';
+import  { use, useState} from 'react';
 import type { ITechnology } from '../../types/techonologiesType';
 import AvailableTechonologies from './AvailableTechonologies';
 import SelectedTechonologies from './SelectedTechonologies';
