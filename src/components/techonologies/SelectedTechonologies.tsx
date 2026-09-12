@@ -49,12 +49,20 @@ const SelectedTechonologies = ({
     <div className="w-full max-w-sm rounded-3xl border border-gray-200 bg-white p-5 shadow-sm transition hover:shadow-md">
       <h1 className="text-xl font-bold">Your Stack</h1>
       <h3 className="text-sm text-gray-600">
-        {selectedTechnologies.length} Technology Selected
+        {
+          selectedTechnologies.length === 0
+            ? "No technologies selected yet."
+            : `${selectedTechnologies.length} Technology Selected`
+        }
+        
       </h3>
       {selectedTechnologies.length === 0 && (
-        <p className="text-sm text-gray-400 mt-4">
-          No technologies selected yet. Please select a technology from the list.
+        <div className="flex items-center justify-center gap-1 py-5 w-full max-w-sm rounded-xl border border-gray-200 bg-white px-3 shadow-sm transition hover:shadow-md mt-4">
+          <p className="text-sm text-gray-400 ">
+         Your stack is empty.
         </p>
+        </div>
+        
       )}
 
       <div className="flex flex-col gap-1 mt-4">

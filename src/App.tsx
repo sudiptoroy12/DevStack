@@ -7,6 +7,7 @@ import { Suspense } from "react";
 import Techonologies from "./components/techonologies/Techonologies";
 import { ToastContainer, Bounce } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import LoadingSpinner from "./components/LoadingSpinner";
 
 const techonologiesFetch = async (): Promise<ITechnology[]> => {
   {
@@ -37,7 +38,7 @@ function App() {
       
       <Navbar />
       <Hero />
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<LoadingSpinner />}>
         <Techonologies techonologiesPromise={techonologiesPromise} />
       </Suspense>
       <Footer />

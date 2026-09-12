@@ -11,7 +11,7 @@ const SelectedTechCard = ({ tech, handleDelete }: SelectedTechCardProps) => {
     return (
          <div
             key={tech.id}
-            className="flex items-center justify-between gap-1 py-2 w-full max-w-sm rounded-xl border border-gray-200 bg-white px-3 shadow-sm transition hover:shadow-md"
+            className="flex items-center justify-between gap-1 py-2 w-full max-w-sm rounded-xl border border-gray-200 bg-white px-3 shadow-sm transition hover:shadow-md "
           >
             <div className="flex items-center gap-2 ">
               <img

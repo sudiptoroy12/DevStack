@@ -8,7 +8,7 @@ const Hero = () => {
       <div className="flex flex-col gap-5 max-w-2xl text-center lg:text-left">
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold ">
           Build Your Ideal <br />
-          <span className="bg-gradient-to-r from-[#FF5722] via-[#D81B7E] to-[#7C3AED] bg-clip-text text-transparent">
+          <span className="brand-gradient ">
             Development Stack
           </span>
         </h1>
@@ -23,7 +23,7 @@ const Hero = () => {
         {/* Buttons */}
         <div className="flex  gap-4 mt-3 justify-center lg:justify-start">
           <button
-            className="bg-gradient-to-r from-[#FF5722] via-[#D81B7E] to-[#7C3AED]
+            className="brand-button
             text-white px-6 py-3 rounded-lg
             hover:from-[#7C3AED] hover:via-[#D81B7E] hover:to-[#FF5722]
             transition duration-300 cursor-pointer

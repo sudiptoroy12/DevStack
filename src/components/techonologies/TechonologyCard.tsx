@@ -50,7 +50,7 @@ const TechonologyCard = ({
       </div>
 
       {/* Name */}
-      <h2 className="mt-4 text-2xl font-semibold text-gray-900">
+      <h2 className="mt-4 text-2xl font-semibold brand-gradient">
         {technology.name}
       </h2>
 
