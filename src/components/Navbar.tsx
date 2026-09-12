@@ -26,7 +26,7 @@ const Navbar = () => {
 
         {/* Navigation Links */}
         <div className="hidden md:flex items-center gap-8">
-          <a href="#" className="text-gray-700 hover:text-[#D91B7E]">
+          <a href="#" className=" text-[#D91B7E]">
             Home
           </a>
 

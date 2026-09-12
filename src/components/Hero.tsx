@@ -3,11 +3,11 @@ import banner from "../assets/banner-stack.png";
 
 const Hero = () => {
   return (
-    <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-6 py-10 sm:py-14 lg:py-20 flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-16">
+    <div className="max-w-7xl mx-auto md:h-[90vh] px-5 sm:px-8 lg:px-6 py-10 sm:py-14 lg:py-20 flex flex-col lg:flex-row items-center justify-between  lg:gap-16">
       {/* Left Side */}
       <div className="flex flex-col gap-5 max-w-2xl text-center lg:text-left">
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold ">
-          Build Your Ideal
+          Build Your Ideal <br />
           <span className="bg-gradient-to-r from-[#FF5722] via-[#D81B7E] to-[#7C3AED] bg-clip-text text-transparent">
             Development Stack
           </span>

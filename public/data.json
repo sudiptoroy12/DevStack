@@ -19,16 +19,7 @@
     "difficulty": "Intermediate",
     "badge": "Top SQL"
   },
-  {
-    "id": "javascript",
-    "name": "JavaScript",
-    "category": "Programming",
-    "description": "A versatile programming language used to create interactive and dynamic web applications.",
-    "icon": "https://icon.icepanel.io/Technology/svg/JavaScript.svg",
-    "rating": 4.9,
-    "difficulty": "Beginner-Friendly",
-    "badge": "Essential"
-  },
+  
   {
     "id": "typescript",
     "name": "TypeScript",
@@ -118,6 +109,16 @@
     "rating": 4.8,
     "difficulty": "Beginner-Friendly",
     "badge": "Lightweight"
+  },
+  {
+    "id": "javascript",
+    "name": "JavaScript",
+    "category": "Programming",
+    "description": "A versatile programming language used to create interactive and dynamic web applications.",
+    "icon": "https://icon.icepanel.io/Technology/svg/JavaScript.svg",
+    "rating": 4.9,
+    "difficulty": "Beginner-Friendly",
+    "badge": "Essential"
   },
   {
     "id": "mongodb",

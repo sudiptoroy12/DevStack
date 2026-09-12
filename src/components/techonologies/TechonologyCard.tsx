@@ -1,5 +1,8 @@
 import { useState, type Dispatch, type SetStateAction } from "react";
 import type { ITechnology } from "../../types/techonologiesType";
+import { Bounce, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 
 
 
@@ -15,13 +18,28 @@ const TechonologyCard = ({ technology, selectedTechnologies, setSelectedTechnolo
 
 
   const handleSelect = () => {
-    setIsSelected(!isSelected);
-    if (isSelected) {
+    setIsSelected(true);
+    // toast.success(`${technology.name} has been added to your stack!`, {
+    //   position: "top-right",
+    //   autoClose: 2000,  });
+ 
+    
       setSelectedTechnologies([...selectedTechnologies, technology]);
-    }
+   toast.success('🦄 Wow so easy!', {
+position: "bottom-right",
+autoClose: 5000,
+hideProgressBar: false,
+closeOnClick: false,
+pauseOnHover: true,
+draggable: true,
+progress: undefined,
+theme: "light",
+transition: Bounce,
+});
+
   };
   return (
-    <div className="w-full max-w-sm rounded-3xl border border-gray-200 bg-white p-6 shadow-sm transition hover:shadow-md">
+    <div className="w-full max-w-sm rounded-3xl border border-gray-200 bg-white p-5 shadow-sm transition hover:shadow-md">
       
       {/* Top */}
       <div className="flex items-center justify-between">
@@ -29,7 +47,7 @@ const TechonologyCard = ({ technology, selectedTechnologies, setSelectedTechnolo
           <img
             src={technology.icon}
             alt={technology.name}
-            className="h-14 w-14 object-contain"
+            className="h-10 w-10 object-contain"
           />
 
           
@@ -41,21 +59,21 @@ const TechonologyCard = ({ technology, selectedTechnologies, setSelectedTechnolo
       </div>
 
       {/* Name */}
-      <h2 className="mt-8 text-3xl font-semibold text-gray-900">
+      <h2 className="mt-4 text-2xl font-semibold text-gray-900">
         {technology.name}
       </h2>
 
       {/* Description */}
-      <p className="mt-5 min-h-[90px] text-base leading-8 text-gray-400">
+      <p className="mt-2 min-h-[75px] text-sm leading-5 text-gray-400">
         {technology.description}
       </p>
 
       {/* Divider */}
-      <div className="my-5 border-t border-gray-200"></div>
+      <div className="my-2 border-t border-gray-200"></div>
 
       {/* Details */}
-      <div className="flex items-center justify-between gap-3">
-        <span className="rounded-lg bg-gray-100 px-4 py-2 text-sm font-medium text-gray-500">
+      <div className="flex items-center justify-between gap-1">
+        <span className="rounded-lg bg-gray-100 px-2 py-1 text-sm font-medium text-gray-500">
           {technology.category}
         </span>
 
@@ -74,7 +92,7 @@ const TechonologyCard = ({ technology, selectedTechnologies, setSelectedTechnolo
 
       {/* Button */}
       <button 
-        className={`mt-6 w-full rounded-xl py-4 text-base font-medium transition cursor-pointer ${
+        className={`mt-4 w-full rounded-xl py-2 text-base font-medium transition cursor-pointer ${
           isSelected 
             ? 'bg-green-500 hover:bg-green-600 text-white' 
             : 'bg-slate-950 hover:bg-slate-800 text-white'
