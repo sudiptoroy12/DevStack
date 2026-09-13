@@ -36,7 +36,7 @@ const TechonologyCard = ({
 
   const handleSelect = () => {
     if (isSelected) {
-      toast.error(`${technology.name} is already in your stack!`, {
+      toast.warn(`${technology.name} is already in your stack!`, {
         position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
@@ -117,10 +117,10 @@ const TechonologyCard = ({
 
       {/* Button */}
       <button
-        disabled={isSelected}
+        
         className={`mt-4 w-full rounded-xl py-2 text-base font-medium transition  ${
           isSelected
-            ? "bg-green-200  text-green-800 cursor-not-allowed"
+            ? "bg-green-200  text-green-800 "
             : "bg-slate-950 hover:bg-slate-800 text-white cursor-pointer"
         }`}
         onClick={handleSelect}
