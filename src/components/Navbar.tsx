@@ -49,7 +49,7 @@ const Navbar = () => {
 
         {/* Buttons */}
         <div className="flex items-center gap-1">
-          <button className="px-2 py-1 md:px-4 md:py-2 text-gray-700 hover:border hover:border-gray-300 rounded-4xl hover:bg-[#D91B7E] hover:text-white cursor-pointer">
+          <button className="px-2 py-1 md:px-3 md:py-2=1 text-gray-700 hover:border hover:border-gray-300 rounded-4xl   cursor-pointer">
             Sign In
           </button>
 

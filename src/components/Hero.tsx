@@ -1,4 +1,3 @@
-
 import banner from "../assets/banner-stack.png";
 
 const Hero = () => {
@@ -8,9 +7,7 @@ const Hero = () => {
       <div className="flex flex-col gap-5 max-w-2xl text-center lg:text-left">
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold ">
           Build Your Ideal <br />
-          <span className="brand-gradient ">
-            Development Stack
-          </span>
+          <span className="brand-gradient ">Development Stack</span>
         </h1>
 
         <p className="text-gray-600 text-base sm:text-lg leading-relaxed max-w-xl mx-auto lg:mx-0">
@@ -25,19 +22,15 @@ const Hero = () => {
           <button
             className="brand-button
             text-white px-6 py-3 rounded-lg
-            hover:from-[#7C3AED] hover:via-[#D81B7E] hover:to-[#FF5722]
-            transition duration-300 cursor-pointer
+             duration-300 cursor-pointer
             w-full sm:w-auto"
           >
             Explore Technologies
           </button>
 
           <button
-            className="border border-[#FF5722]
+            className=" brand-outline-button
             px-6 py-3 rounded-lg
-            hover:bg-gradient-to-r hover:from-[#FF5722]
-            hover:via-[#D81B7E] hover:to-[#7C3AED]
-            hover:text-white
             transition duration-300 cursor-pointer
             w-full sm:w-auto"
           >

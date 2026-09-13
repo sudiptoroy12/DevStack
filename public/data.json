@@ -10,17 +10,6 @@
     "badge": "Popular"
   },
   {
-    "id": "postgresql",
-    "name": "PostgreSQL",
-    "category": "Database",
-    "description": "A powerful, open-source object-relational database system with proven reliability.",
-    "icon": "https://icon.icepanel.io/Technology/svg/PostgresSQL.svg",
-    "rating": 4.9,
-    "difficulty": "Intermediate",
-    "badge": "Top SQL"
-  },
-  
-  {
     "id": "typescript",
     "name": "TypeScript",
     "category": "Programming",
@@ -29,6 +18,16 @@
     "rating": 4.8,
     "difficulty": "Intermediate",
     "badge": "Trending"
+  },
+  {
+    "id": "javascript",
+    "name": "JavaScript",
+    "category": "Programming",
+    "description": "A versatile programming language used to create interactive and dynamic web applications.",
+    "icon": "https://icon.icepanel.io/Technology/svg/JavaScript.svg",
+    "rating": 4.9,
+    "difficulty": "Beginner-Friendly",
+    "badge": "Essential"
   },
   {
     "id": "html5",
@@ -71,26 +70,6 @@
     "badge": "Full Stack"
   },
   {
-    "id": "vue",
-    "name": "Vue.js",
-    "category": "Frontend",
-    "description": "A progressive JavaScript framework for building flexible and interactive user interfaces.",
-    "icon": "https://icon.icepanel.io/Technology/svg/Vue.js.svg",
-    "rating": 4.7,
-    "difficulty": "Beginner-Friendly",
-    "badge": "Popular"
-  },
-  {
-    "id": "angular",
-    "name": "Angular",
-    "category": "Frontend",
-    "description": "A comprehensive TypeScript-based framework for building large-scale web applications.",
-    "icon": "https://icon.icepanel.io/Technology/svg/Angular.svg",
-    "rating": 4.6,
-    "difficulty": "Advanced",
-    "badge": "Enterprise"
-  },
-  {
     "id": "nodejs",
     "name": "Node.js",
     "category": "Backend",
@@ -111,16 +90,6 @@
     "badge": "Lightweight"
   },
   {
-    "id": "javascript",
-    "name": "JavaScript",
-    "category": "Programming",
-    "description": "A versatile programming language used to create interactive and dynamic web applications.",
-    "icon": "https://icon.icepanel.io/Technology/svg/JavaScript.svg",
-    "rating": 4.9,
-    "difficulty": "Beginner-Friendly",
-    "badge": "Essential"
-  },
-  {
     "id": "mongodb",
     "name": "MongoDB",
     "category": "Database",
@@ -131,6 +100,16 @@
     "badge": "NoSQL"
   },
   {
+    "id": "postgresql",
+    "name": "PostgreSQL",
+    "category": "Database",
+    "description": "A powerful, open-source object-relational database system with proven reliability.",
+    "icon": "https://icon.icepanel.io/Technology/svg/PostgresSQL.svg",
+    "rating": 4.9,
+    "difficulty": "Intermediate",
+    "badge": "Top SQL"
+  },
+  {
     "id": "mysql",
     "name": "MySQL",
     "category": "Database",
@@ -139,46 +118,6 @@
     "rating": 4.7,
     "difficulty": "Beginner-Friendly",
     "badge": "Popular SQL"
-  },
-  {
-    "id": "redis",
-    "name": "Redis",
-    "category": "Database",
-    "description": "An in-memory data store commonly used for caching, sessions, queues, and real-time applications.",
-    "icon": "https://icon.icepanel.io/Technology/svg/Redis.svg",
-    "rating": 4.7,
-    "difficulty": "Intermediate",
-    "badge": "Fast"
-  },
-  {
-    "id": "python",
-    "name": "Python",
-    "category": "Programming",
-    "description": "A high-level programming language known for simplicity, versatility, and extensive libraries.",
-    "icon": "https://icon.icepanel.io/Technology/svg/Python.svg",
-    "rating": 4.9,
-    "difficulty": "Beginner-Friendly",
-    "badge": "Popular"
-  },
-  {
-    "id": "java",
-    "name": "Java",
-    "category": "Programming",
-    "description": "A popular object-oriented programming language used for enterprise and backend applications.",
-    "icon": "https://icon.icepanel.io/Technology/svg/Java.svg",
-    "rating": 4.7,
-    "difficulty": "Intermediate",
-    "badge": "Enterprise"
-  },
-  {
-    "id": "cpp",
-    "name": "C++",
-    "category": "Programming",
-    "description": "A powerful general-purpose programming language widely used for performance-critical software.",
-    "icon": "https://icon.icepanel.io/Technology/svg/C%2B%2B.svg",
-    "rating": 4.6,
-    "difficulty": "Advanced",
-    "badge": "Performance"
   },
   {
     "id": "git",
@@ -211,16 +150,6 @@
     "badge": "DevOps"
   },
   {
-    "id": "kubernetes",
-    "name": "Kubernetes",
-    "category": "DevOps",
-    "description": "An open-source platform for automating deployment, scaling, and management of containers.",
-    "icon": "https://icon.icepanel.io/Technology/svg/Kubernetes.svg",
-    "rating": 4.7,
-    "difficulty": "Advanced",
-    "badge": "Cloud Native"
-  },
-  {
     "id": "aws",
     "name": "AWS",
     "category": "Cloud",
@@ -229,26 +158,6 @@
     "rating": 4.8,
     "difficulty": "Intermediate",
     "badge": "Cloud Leader"
-  },
-  {
-    "id": "firebase",
-    "name": "Firebase",
-    "category": "Backend",
-    "description": "A Google platform providing authentication, databases, hosting, analytics, and backend services.",
-    "icon": "https://icon.icepanel.io/Technology/svg/Firebase.svg",
-    "rating": 4.7,
-    "difficulty": "Beginner-Friendly",
-    "badge": "Developer Friendly"
-  },
-  {
-    "id": "graphql",
-    "name": "GraphQL",
-    "category": "API",
-    "description": "A query language and runtime for APIs that allows clients to request exactly the data they need.",
-    "icon": "https://icon.icepanel.io/Technology/svg/GraphQL.svg",
-    "rating": 4.6,
-    "difficulty": "Intermediate",
-    "badge": "Modern API"
   },
   {
     "id": "redux",
@@ -279,26 +188,6 @@
     "rating": 4.8,
     "difficulty": "Beginner-Friendly",
     "badge": "Essential"
-  },
-  {
-    "id": "sass",
-    "name": "Sass",
-    "category": "Frontend",
-    "description": "A CSS preprocessor that adds features such as variables, nesting, and reusable styles.",
-    "icon": "https://icon.icepanel.io/Technology/svg/Sass.svg",
-    "rating": 4.5,
-    "difficulty": "Beginner-Friendly",
-    "badge": "CSS Tool"
-  },
-  {
-    "id": "figma",
-    "name": "Figma",
-    "category": "Design",
-    "description": "A collaborative design tool used to create interfaces, prototypes, and design systems.",
-    "icon": "https://icon.icepanel.io/Technology/svg/Figma.svg",
-    "rating": 4.8,
-    "difficulty": "Beginner-Friendly",
-    "badge": "UI Design"
   },
   {
     "id": "postman",

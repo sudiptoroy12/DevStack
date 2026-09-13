@@ -1,30 +1,22 @@
-import { useState, type Dispatch, type SetStateAction } from "react";
+import {  type Dispatch, type SetStateAction } from "react";
 import type { ITechnology } from "../../types/techonologiesType";
 import { Bounce, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const badgeStyles: Record<string, string> = {
-  Popular: "bg-blue-50 text-blue-600",
-  "Top SQL": "bg-indigo-50 text-indigo-600",
-  Trending: "bg-pink-50 text-pink-600",
-  Essential: "bg-green-50 text-green-600",
-  "Full Stack": "bg-purple-50 text-purple-600",
-  Enterprise: "bg-slate-100 text-slate-700",
-  Lightweight: "bg-cyan-50 text-cyan-600",
-  NoSQL: "bg-orange-50 text-orange-600",
-  "Popular SQL": "bg-teal-50 text-teal-600",
-  Fast: "bg-yellow-50 text-yellow-600",
-  Performance: "bg-red-50 text-red-600",
-  DevOps: "bg-violet-50 text-violet-600",
-  "Cloud Native": "bg-sky-50 text-sky-600",
-  "Cloud Leader": "bg-blue-50 text-blue-700",
-  "Developer Friendly": "bg-emerald-50 text-emerald-600",
-  "Modern API": "bg-fuchsia-50 text-fuchsia-600",
-  "State Management": "bg-rose-50 text-rose-600",
-  "Fast Build": "bg-amber-50 text-amber-600",
-  "CSS Tool": "bg-lime-50 text-lime-600",
-  "UI Design": "bg-purple-50 text-purple-600",
-  "API Testing": "bg-orange-50 text-orange-600",
+  Popular: "bg-blue-100 text-blue-700 border border-blue-200",
+  Essential: "bg-green-100 text-green-700 border border-green-200",
+  Trending: "bg-pink-100 text-pink-700 border border-pink-200",
+  "Top SQL": "bg-indigo-100 text-indigo-700 border border-indigo-200",
+  "Full Stack": "bg-purple-100 text-purple-700 border border-purple-200",
+  Lightweight: "bg-cyan-100 text-cyan-700 border border-cyan-200",
+  NoSQL: "bg-orange-100 text-orange-700 border border-orange-200",
+  "Popular SQL": "bg-yellow-100 text-yellow-700 border border-yellow-200",
+  DevOps: "bg-red-100 text-red-700 border border-red-200",
+  "Cloud Leader": "bg-sky-100 text-sky-700 border border-sky-200",
+  "State Management": "bg-violet-100 text-violet-700 border border-violet-200",
+  "Fast Build": "bg-teal-100 text-teal-700 border border-teal-200",
+  "API Testing": "bg-emerald-100 text-emerald-700 border border-emerald-200",
 };
 
 interface CardProps {
@@ -38,11 +30,10 @@ const TechonologyCard = ({
   selectedTechnologies,
   setSelectedTechnologies,
 }: CardProps) => {
-  const [isSelected, setIsSelected] = useState(false);
+  
+  const isSelected = selectedTechnologies.some((tech) => tech.id === technology.id);
 
   const handleSelect = () => {
-    setIsSelected(true);
-
     setSelectedTechnologies([...selectedTechnologies, technology]);
     toast.success(`${technology.name} has been added to your stack!`, {
       position: "top-right",
