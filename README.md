@@ -2,7 +2,9 @@
 
 ### Build Your Ideal Development Stack
 
-Dev Stack is a modern and responsive web application that helps developers explore different technologies and create their own personalized development stack. Users can browse technologies, check their category, difficulty, rating, and add or remove technologies from their stack.
+Dev Stack is a modern and responsive web application that helps developers explore different technologies and create their own personalized development stack.
+
+Users can browse technologies, check their category, difficulty, rating, and add or remove technologies from their stack.
 
 ---
 
@@ -49,6 +51,12 @@ React-Toastify provides notifications when technologies are added, removed, dupl
 
 ---
 
+## 🔗 Live Demo & GitHub
+
+* 🌐 **Live Demo:** [View Dev Stack on Netlify](https://devstackwebsitee.netlify.app/)
+* 💻 **GitHub Repository:** [View Source Code on GitHub](https://github.com/sudiptoroy12/DevStack)
+
+---
 
 ## 👨‍💻 Author
 
@@ -59,13 +67,9 @@ Aspiring Full Stack MERN Developer passionate about building modern and responsi
 ---
 
 ⭐ If you like this project, don't forget to give the repository a star!
-
-
-
-
-
-........
-
+.
+.
+.
 # React Questions & Answers
 
 ## 1. What is JSX, and why is it used in React?
