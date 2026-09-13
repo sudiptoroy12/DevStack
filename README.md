@@ -123,7 +123,7 @@ When I add or remove a technology, the state is updated.
 
 useEffect is used to run code after a component loads or updates.
 
-Normally, it can be used to load data when a page starts.
+Normally, it can be used to load data when a page starts. It also has a dependency array that controls when the effect should run again. If the dependency array is empty [], the effect runs only once when the component loads.
 
 In my current project, I used React's use() API instead of useEffect to load the JSON data because it was easier for me to use.
 

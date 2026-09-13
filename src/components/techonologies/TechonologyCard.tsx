@@ -1,4 +1,4 @@
-import {  type Dispatch, type SetStateAction } from "react";
+import { type Dispatch, type SetStateAction } from "react";
 import type { ITechnology } from "../../types/techonologiesType";
 import { Bounce, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -30,10 +30,25 @@ const TechonologyCard = ({
   selectedTechnologies,
   setSelectedTechnologies,
 }: CardProps) => {
-  
-  const isSelected = selectedTechnologies.some((tech) => tech.id === technology.id);
+  const isSelected = selectedTechnologies.some(
+    (tech) => tech.id === technology.id,
+  );
 
   const handleSelect = () => {
+    if (isSelected) {
+      toast.error(`${technology.name} is already in your stack!`, {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: false,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        transition: Bounce,
+      });
+      return;
+    }
     setSelectedTechnologies([...selectedTechnologies, technology]);
     toast.success(`${technology.name} has been added to your stack!`, {
       position: "top-right",
@@ -83,18 +98,18 @@ const TechonologyCard = ({
 
       {/* Details */}
       <div className="flex items-center justify-between gap-1">
-        <span className="rounded-lg bg-gray-100 px-2 py-1 text-sm font-medium text-gray-500">
+        <span className="rounded-lg bg-gray-100 px-2 py-1 text-[13px] font-medium text-gray-500">
           {technology.category}
         </span>
 
-        <span className="text-sm font-medium text-gray-500">
+        <span className="text-[13px] font-medium text-gray-500">
           {technology.difficulty}
         </span>
 
         <div className="flex items-center gap-1">
           <span className="text-lg text-yellow-400">★</span>
 
-          <span className="text-sm font-medium text-gray-600">
+          <span className="text-[14px] font-medium text-gray-600">
             {technology.rating}
           </span>
         </div>
@@ -110,7 +125,7 @@ const TechonologyCard = ({
         }`}
         onClick={handleSelect}
       >
-        {isSelected ? "Added to Stack" : "Add to Stack"}
+        {isSelected ? "✓ Added to Stack" : "Add to Stack"}
       </button>
     </div>
   );

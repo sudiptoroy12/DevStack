@@ -65,7 +65,7 @@ const SelectedTechonologies = ({
         
       )}
 
-      <div className="flex flex-col gap-1 mt-4">
+      <div className={`${selectedTechnologies.length === 0 ? 'hidden' : 'flex'} flex-col gap-1 mt-4`}>
         {selectedTechnologies.map((tech) => ( <SelectedTechCard tech={tech} handleDelete={handleDelete}/>         
          
         ))}
