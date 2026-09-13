@@ -3,6 +3,30 @@ import type { ITechnology } from "../../types/techonologiesType";
 import { Bounce, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
+const badgeStyles: Record<string, string> = {
+  Popular: "bg-blue-50 text-blue-600",
+  "Top SQL": "bg-indigo-50 text-indigo-600",
+  Trending: "bg-pink-50 text-pink-600",
+  Essential: "bg-green-50 text-green-600",
+  "Full Stack": "bg-purple-50 text-purple-600",
+  Enterprise: "bg-slate-100 text-slate-700",
+  Lightweight: "bg-cyan-50 text-cyan-600",
+  NoSQL: "bg-orange-50 text-orange-600",
+  "Popular SQL": "bg-teal-50 text-teal-600",
+  Fast: "bg-yellow-50 text-yellow-600",
+  Performance: "bg-red-50 text-red-600",
+  DevOps: "bg-violet-50 text-violet-600",
+  "Cloud Native": "bg-sky-50 text-sky-600",
+  "Cloud Leader": "bg-blue-50 text-blue-700",
+  "Developer Friendly": "bg-emerald-50 text-emerald-600",
+  "Modern API": "bg-fuchsia-50 text-fuchsia-600",
+  "State Management": "bg-rose-50 text-rose-600",
+  "Fast Build": "bg-amber-50 text-amber-600",
+  "CSS Tool": "bg-lime-50 text-lime-600",
+  "UI Design": "bg-purple-50 text-purple-600",
+  "API Testing": "bg-orange-50 text-orange-600",
+};
+
 interface CardProps {
   technology: ITechnology;
   selectedTechnologies: ITechnology[];
@@ -44,7 +68,11 @@ const TechonologyCard = ({
           />
         </div>
 
-        <span className="rounded-full bg-blue-50 px-5 py-2 text-sm font-medium text-blue-500">
+        <span
+          className={`rounded-full px-5 py-2 text-sm font-medium ${
+            badgeStyles[technology.badge] ?? "bg-gray-100 text-gray-600"
+          }`}
+        >
           {technology.badge}
         </span>
       </div>
@@ -83,11 +111,11 @@ const TechonologyCard = ({
 
       {/* Button */}
       <button
-      disabled={isSelected}
-        className={`mt-4 w-full rounded-xl py-2 text-base font-medium transition cursor-pointer ${
+        disabled={isSelected}
+        className={`mt-4 w-full rounded-xl py-2 text-base font-medium transition  ${
           isSelected
-            ? "bg-green-500 hover:bg-green-600 text-white"
-            : "bg-slate-950 hover:bg-slate-800 text-white"
+            ? "bg-green-200  text-green-800 cursor-not-allowed"
+            : "bg-slate-950 hover:bg-slate-800 text-white cursor-pointer"
         }`}
         onClick={handleSelect}
       >

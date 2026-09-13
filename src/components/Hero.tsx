@@ -3,7 +3,7 @@ import banner from "../assets/banner-stack.png";
 
 const Hero = () => {
   return (
-    <div className="max-w-7xl mx-auto md:h-[90vh] px-5 sm:px-8 lg:px-6 py-10 sm:py-14 lg:py-20 flex flex-col lg:flex-row items-center justify-between  lg:gap-16">
+    <div className="max-w-7xl mx-auto h-screen lg:h-[90vh] px-5 sm:px-8 lg:px-6 py-10 sm:py-14 lg:py-20 flex flex-col lg:flex-row items-center justify-between  lg:gap-16">
       {/* Left Side */}
       <div className="flex flex-col gap-5 max-w-2xl text-center lg:text-left">
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold ">

@@ -1,6 +1,15 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
+html {
+  scrollbar-width: none;
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
+
 :root {
   --brand-gradient: linear-gradient(
     90deg,
