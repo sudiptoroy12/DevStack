@@ -83,6 +83,7 @@ const TechonologyCard = ({
 
       {/* Button */}
       <button
+      disabled={isSelected}
         className={`mt-4 w-full rounded-xl py-2 text-base font-medium transition cursor-pointer ${
           isSelected
             ? "bg-green-500 hover:bg-green-600 text-white"
@@ -90,7 +91,7 @@ const TechonologyCard = ({
         }`}
         onClick={handleSelect}
       >
-        {isSelected ? "Selected" : "Add to Stack"}
+        {isSelected ? "Added to Stack" : "Add to Stack"}
       </button>
     </div>
   );
